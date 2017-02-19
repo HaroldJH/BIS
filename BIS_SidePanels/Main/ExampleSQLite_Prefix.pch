@@ -1,0 +1,16 @@
+//
+// Prefix header for all source files of the 'ExampleSQLite' target in the 'ExampleSQLite' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+#ifdef DEBUG
+#define Logger(format, ...) NSLog(@"%s %@ : %d", __PRETTY_FUNCTION__,[NSString stringWithFormat:format, ## __VA_ARGS__], __LINE__);
+#else
+#define Logger( s, ... )
+#endif
+
+#define ARC_ENABLED YES
